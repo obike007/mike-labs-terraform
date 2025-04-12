@@ -7,13 +7,13 @@ resource "aws_instance" "mynewec2" {
   connection {
     type     = "ssh"
     user     = "ec2-user"
-    private_key  = "project-idx.pem"
+    private_key  = file("./project-idx.pem")
     host     = self.public_ip
   }
   provisioner "remote-exec" {
     inline = [
-      "yum -y install nginx",
-      "systemctl start nginx"
+      "sudo yum -y install nginx",
+      "sudo systemctl start nginx"
     ]
   }
 
