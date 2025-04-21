@@ -1,7 +1,7 @@
-resource "aws_instance" "mynewec2" {
+/*resource "aws_instance" "mynewec2" {
   ami           = "ami-01ff9fc7721895c6b"
   instance_type = "t2.micro"
-  /*key_name = "project-idx"
+  key_name = "project-idx"
   vpc_security_group_ids = ["sg-063b54a530f723307"]
 
   connection {
@@ -23,6 +23,7 @@ resource "aws_instance" "mynewec2" {
   provisioner "local-exec" {
     command = "echo ${self.private_ip} >> private_ips.txt"
   }
-  */
+ 
 }
+ */
 
